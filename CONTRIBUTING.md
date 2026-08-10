@@ -1,6 +1,6 @@
 # 🤝 Guia de Fluxo Git & GitHub (Trabalho em Dupla)
 
-Este guia documenta o passo a passo prático para o trabalho colaborativo durante os 7 dias de desenvolvimento, garantindo que o código da dupla seja integrado sem conflitos e com histórico organizado.
+Este guia documenta o passo a passo prático para o trabalho colaborativo durante os **5 dias de desenvolvimento (Segunda a Sexta)**, garantindo que o código da dupla seja integrado sem conflitos e com histórico organizado.
 
 ---
 
@@ -12,8 +12,8 @@ A branch `main` representa o código final, estável e testado.
 ```text
 main (código estável)
  │
- ├── feature/dia2-timer-logic   (Pessoa A) ──> Abre PR ──> Review ──> Merge na main
- └── feature/dia2-timer-ui      (Pessoa B) ──> Abre PR ──> Review ──> Merge na main
+ ├── feature/dia1-timer-logic   (Pessoa A) ──> Abre PR ──> Review ──> Merge na main
+ └── feature/dia1-timer-ui      (Pessoa B) ──> Abre PR ──> Review ──> Merge na main
 ```
 
 ### Padrão de Nomenclatura das Branches:
@@ -21,9 +21,10 @@ main (código estável)
 - `fix/dia<X>-<descricao>` (para correções de bugs)
 
 *Exemplos:*
-- `feature/dia2-logica-timer`
-- `feature/dia2-layout-flet`
-- `feature/dia3-maquina-estados`
+- `feature/dia1-logica-timer`
+- `feature/dia2-maquina-estados`
+- `feature/dia3-persistencia-dados`
+- `feature/dia4-estilizacao-darkmode`
 
 ---
 
@@ -38,7 +39,7 @@ git pull origin main
 
 ### Passo 2: Crie e entre na sua branch de trabalho
 ```bash
-git checkout -b feature/dia2-logica-timer
+git checkout -b feature/dia1-logica-timer
 ```
 
 ### Passo 3: Escreva o código e faça commits atômicos
@@ -66,7 +67,7 @@ git commit -m "feat: adiciona classe Pomodoro e metodo tick"
 ### Passo 4: Envie sua branch para o GitHub
 Ao terminar a tarefa do dia (ou uma parte importante dela):
 ```bash
-git push -u origin feature/dia2-logica-timer
+git push -u origin feature/dia1-logica-timer
 ```
 *(Nas próximas vezes na mesma branch, basta executar apenas `git push`).*
 
@@ -76,8 +77,8 @@ git push -u origin feature/dia2-logica-timer
 
 ### Como Abrir o PR no GitHub:
 1. Acesse o repositório no navegador: [github.com/hrlimapro/projeto-piloto](https://github.com/hrlimapro/projeto-piloto).
-2. O GitHub mostrará uma barra amarela no topo com o botão verde: **"Compare & pull request"**. Clique nele.
-3. **Título:** Dê um título claro (ex: `feat: lógica do timer e decremento (Dia 2)`).
+2. O GitHub mostrará uma barra no topo com o botão: **"Compare & pull request"**. Clique nele.
+3. **Título:** Dê um título claro (ex: `feat: lógica do timer e decremento (Dia 1)`).
 4. **Descrição (Template Automático):** Preencha o checklist marcando com `[x]` as etapas concluídas e testadas na sua máquina.
 5. **Reviewers:** No painel lateral direito, adicione seu colega de dupla como revisor.
 6. Clique em **"Create pull request"**.
