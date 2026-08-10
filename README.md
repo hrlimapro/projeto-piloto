@@ -88,55 +88,27 @@ projeto-piloto/
 
 ---
 
-## 🤝 5. Boas Práticas e Fluxo de Colaboração no Git
+## 🤝 5. Boas Práticas e Fluxo Git & GitHub
 
-### Padrão de Branching
-Nunca envie código diretamente para a branch `main`. Crie uma branch para a tarefa do dia:
-```bash
-# Exemplo para a Pessoa A no Dia 2
-git checkout -b feature/dia2-timer-logic
+> [!TIP]
+> O passo a passo detalhado de criação de branches, abertura de PRs, revisão de código e resolução de conflitos está documentado no arquivo **[CONTRIBUTING.md](file:///c:/projetos-pessoais/projeto-piloto/CONTRIBUTING.md)**.
 
-# Exemplo para a Pessoa B no Dia 2
-git checkout -b feature/dia2-timer-ui
-```
-
-### Padrão de Commits
-Escreva mensagens de commit claras e no padrão convencional:
-- `feat:` Nova funcionalidade
-- `fix:` Correção de bug
-- `refactor:` Melhoria de código sem alterar comportamento
-- `docs:` Alterações na documentação
-- `style:` Formatação visual/estética
-
-Exemplo:
-```bash
-git add .
-git commit -m "feat: implementa metodo tick na classe Pomodoro"
-```
-
-### Submissão e Integração (Pull Request)
-1. Envie sua branch para o GitHub:
-   ```bash
-   git push -u origin feature/dia2-timer-logic
-   ```
-2. Abra um **Pull Request (PR)** no GitHub direcionado à `main`.
-3. O parceiro de dupla revisa o código antes do merge.
-4. Após o merge, ambos atualizam suas cópias locais:
-   ```bash
-   git checkout main
-   git pull origin main
-   ```
+### Resumo do Fluxo Diário
+1. Atualize sua `main`: `git checkout main && git pull origin main`
+2. Crie uma branch: `git checkout -b feature/diaX-nome-da-tarefa`
+3. Trabalhe, teste e comite: `git commit -m "feat: descricao"`
+4. Envie para o GitHub: `git push -u origin feature/diaX-nome-da-tarefa`
+5. Abra o **Pull Request** no GitHub para revisão da dupla.
 
 ---
 
-## 🧪 6. Testes & Integração Contínua (CI)
+## 🧪 6. Plano de Testes & Qualidade
 
-- **Plano de Testes Completo:** Consulte o arquivo [TEST_PLAN.md](file:///c:/projetos-pessoais/projeto-piloto/TEST_PLAN.md) para a matriz detalhada de testes por dia e cenários de estresse.
-- **Execução Local:**
+- **Matriz de Testes:** Consulte o arquivo **[TEST_PLAN.md](file:///c:/projetos-pessoais/projeto-piloto/TEST_PLAN.md)** para os critérios de aceitação e testes de estresse antes de aprovar cada Pull Request.
+- **Execução dos Testes Locais:**
   ```bash
   pytest
   ```
-- **GitHub Actions (CI):** Cada Push e Pull Request na branch `main` executa automaticamente a suíte de testes do `pytest`.
 
 ---
 
