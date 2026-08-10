@@ -129,7 +129,18 @@ git commit -m "feat: implementa metodo tick na classe Pomodoro"
 
 ---
 
-## 📝 6. Regras e Convenções do Código
+## 🧪 6. Testes & Integração Contínua (CI)
+
+- **Plano de Testes Completo:** Consulte o arquivo [TEST_PLAN.md](file:///c:/projetos-pessoais/projeto-piloto/TEST_PLAN.md) para a matriz detalhada de testes por dia e cenários de estresse.
+- **Execução Local:**
+  ```bash
+  pytest
+  ```
+- **GitHub Actions (CI):** Cada Push e Pull Request na branch `main` executa automaticamente a suíte de testes do `pytest`.
+
+---
+
+## 📝 7. Regras e Convenções do Código
 
 - **Código Limpo:** Manter o `main.py` organizado e enxuto.
 - **Separação de Responsabilidades:** Lógica de negócio e dados separados da interface visual.
